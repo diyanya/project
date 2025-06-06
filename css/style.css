@@ -238,11 +238,10 @@ body {
     margin-bottom: 150px;
 }
 
-.container {}
-
 .abbout__inner {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .about__content {
@@ -252,7 +251,7 @@ body {
 }
 
 .about__subtitle {
-    font-family: 20px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -358,8 +357,6 @@ body {
     margin-bottom: 150px;
 }
 
-.container {}
-
 .reviews__top {
     margin-bottom: 100px;
     margin-left: calc(50% + 10px);
@@ -386,8 +383,6 @@ body {
 .reviews__item:nth-child(even) {
     padding-top: 100px;
 }
-
-.reviews__item {}
 
 .reviews__img {
     margin-bottom: 20px;
@@ -441,8 +436,6 @@ body {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-
-.footer__info {}
 
 .footer__info-list {
     display: flex;
@@ -499,29 +492,65 @@ body {
     padding: 0;
     position: relative;
     margin-top: 10px;
+    z-index: 1;
 }
 
 .menu__btn span {
-    height: 3px;
     width: 100%;
     height: 4px;
     background-color: #231F20;
     transition: background-color .3s;
 }
 
-.menu.menu-open .menu__list {
+.menu.menu--open .menu__list {
     transform: translateY(0%);
 }
 
-.menu.menu-open .menu__btn span {
+.menu.menu--open .menu__btn span {
     background-color: #fff;
 }
 
+@media (max-width: 1500px) {
+    .about__img {
+        flex-basis: 50%;
+    }
+
+    .about__img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .about__title {
+        margin-bottom: 20px;
+    }
+
+    .about__img {
+        align-self: flex-end;
+    }
+
+    .about__content {
+        flex-basis: 50%;
+    }
+
+    .reviews__top {
+        margin-left: 0;
+        margin-bottom: 75px;
+    }
+}
+
 @media (max-width: 1168px) {
+
+    .menu.menu--open .menu__list {
+        background-color: #231F20;
+        z-index: 1000;
+    }
+
     .menu__btn {
         display: flex;
         transform: none;
-        position: static;
+        position: relative;
+        z-index: 1001;
     }
 
     .menu__list {
@@ -530,12 +559,11 @@ body {
         right: 0;
         top: 0;
         bottom: 0;
-        border-color: #231F20;
+        background-color: #231F20;
         color: #fff;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        text-transform: uppercase;
         font-size: 24px;
         transform: translateY(-100%);
         transition: transform .3s;
@@ -570,8 +598,61 @@ body {
         font-size: 40px;
     }
 
+    .abbout__inner {
+        flex-wrap: wrap;
+    }
+
+    .about__content {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .about__img {
+        flex-basis: 100%;
+    }
+
+    .about,
+    .site-images,
+    .courses,
+    .reviews {
+        margin-bottom: 75px;
+    }
+
     .header__phone {
         font-size: 14px;
+    }
+
+    .courses__info {
+        flex-wrap: wrap;
+        margin-bottom: 50%;
+    }
+
+    .courses__title,
+    .courses__text {
+        flex-basis: 100%;
+    }
+
+    .courses__title,
+    .text {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .courses__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reviews__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews__item:nth-child(even) {
+        padding-top: 0;
+    }
+
+    .reviews__img {
+        width: 100%;
     }
 }
 
@@ -599,20 +680,151 @@ body {
     }
 
     .header__logo {
-        width: 200px;
+        margin-top: 10px;
+        width: 180px;
     }
 
     .header__phone {
-        align-self: flex-end;
-        margin-top: 10px;
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .menu {
+        margin-left: auto;
     }
 
     .header__top {
-        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px 0 40px;
     }
 
     .menu__btn {
-        width: 36px;
-        height: 24px;
+        display: flex;
+    }
+
+    .footer__title {
+        font-size: 35px;
+    }
+
+    .footer__bottom {
+        flex-wrap: wrap;
+    }
+
+    .footer__info-list {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .text {
+        font-size: 35px;
+    }
+
+    .courses__info {
+        flex-wrap: wrap;
+        margin-bottom: 50%;
+    }
+
+    .courses__title,
+    .courses__text {
+        flex-basis: 100%;
+    }
+
+    .courses__title,
+    .about__title,
+    .reviews__title {
+        font-size: 35px;
+    }
+
+    .courses__subtitle {
+        margin-bottom: 10px;
+    }
+
+    .courses__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__top {
+        flex-wrap: wrap-reverse;
+        gap: 30px;
+    }
+
+    .footer__title {
+        text-align: center;
+    }
+
+    .footer__info-list {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header__buttons-activities,
+    .buttons-book {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__logo {
+        margin-top: 10px;
+        width: 180px;
+    }
+
+    .header__info-list {
+        gap: 10px;
+    }
+
+    .header__news-title,
+    .header__news-time {
+        font-size: 20px;
+    }
+
+    .about__title {
+        font-size: 35px;
+    }
+
+    .about__subtitle,
+    .courses__subtitle,
+    .reviews__subtitle {
+        margin-bottom: 10px;
+    }
+
+    .courses__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses__item h5 {
+        font-size: 14px;
+        font-weight: 400;
+        width: 100px;
+        text-align: center;
+    }
+
+    .site-images {
+        display: none;
+    }
+
+    .reviews__top {
+        margin-bottom: 30px;
+    }
+
+    .reviews__items {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__logo {
+        margin-left: 15px;
+    }
+
+    .footer__title {
+        margin-left: 25px;
     }
 }
