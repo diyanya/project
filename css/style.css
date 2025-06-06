@@ -511,10 +511,12 @@ body {
 @media (max-width: 1168px) {
     .menu__btn {
         display: flex;
+        transform: none;
+        position: static;
     }
 
     .menu__list {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 0;
