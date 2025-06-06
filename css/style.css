@@ -26,6 +26,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p {
     margin: 0;
 }
@@ -138,7 +139,7 @@ body {
     margin-top: auto;
 }
 
-.header__social-list {
+.social-list {
     display: flex;
     gap: 20px;
 }
@@ -179,13 +180,20 @@ body {
     gap: 20px;
 }
 
-.header__buttons a {
+.header__buttons-activities {
     font-size: 32px;
+    font-weight: 400;
     padding: 10px 20px;
     border-radius: 30px;
+    text-transform: uppercase;
 }
 
-.header__buttons-book {
+.buttons-book {
+    font-size: 32px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
     background-color: #231F20;
     color: #fff;
 }
@@ -273,4 +281,193 @@ body {
 
 .about__img {
     position: relative;
+}
+
+
+.courses {
+    margin-bottom: 100px;
+}
+
+.courses__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.courses__info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+.courses__title {
+    font-size: 64px;
+    font-weight: 800;
+    text-transform: uppercase;
+    flex-basis: 60%;
+}
+
+.courses__text {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    flex-basis: 40%;
+}
+
+.courses__text .buttons-book {
+    align-self: start;
+}
+
+.courses__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.courses__item {
+    border: 1px solid #231F20;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courses__item h5 {
+    font-size: 26px;
+    font-weight: 400;
+    width: 200px;
+    text-align: center;
+}
+
+.site-images {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.reviews {
+    margin-bottom: 150px;
+}
+
+.container {}
+
+.reviews__top {
+    margin-bottom: 100px;
+    margin-left: calc(50% + 10px);
+}
+
+.reviews__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.reviews__title {
+    font-size: 64px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.reviews__items {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.reviews__item:nth-child(even) {
+    padding-top: 100px;
+}
+
+.reviews__item {}
+
+.reviews__img {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.blockquote {
+    margin: 0;
+}
+
+.blockquote__text {
+    margin-bottom: 15px;
+}
+
+.blockquote__cite {
+    display: block;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.blockquote__cite::before {
+    content: '/';
+}
+
+.blockquote__time {
+    display: block;
+    text-align: right;
+}
+
+.footer {
+    padding: 100px 0;
+    background-color: #231F20;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__inner {
+    max-width: 1160px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer__title {
+    font-size: 64px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.footer__info {}
+
+.footer__info-list {
+    display: flex;
+    gap: 68px;
+    margin-bottom: 60px;
+}
+
+.footer__info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer__info-item dt {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer__info-item dd {
+    margin-left: 0;
+}
+
+.footer__info-item span {
+    display: block;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: flex-end;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 40px;
 }
