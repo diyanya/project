@@ -238,7 +238,7 @@ body {
     margin-bottom: 150px;
 }
 
-.abbout__inner {
+.about__inner {
     display: flex;
     justify-content: space-between;
     gap: 20px;
