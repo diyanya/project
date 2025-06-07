@@ -624,7 +624,7 @@ body {
 
     .courses__info {
         flex-wrap: wrap;
-        margin-bottom: 50%;
+        margin-bottom: 50px;
     }
 
     .courses__title,
@@ -636,6 +636,11 @@ body {
     .text {
         font-size: 64px;
     }
+
+    .buttons-book {
+        margin-top: 20px;
+    }
+
 }
 
 @media (max-width: 1050px) {
@@ -691,6 +696,7 @@ body {
         text-align: center;
         padding: 8px 15px;
         font-size: 14px;
+        margin-bottom: 50px;
     }
 
     .menu {
@@ -727,7 +733,7 @@ body {
 
     .courses__info {
         flex-wrap: wrap;
-        margin-bottom: 50%;
+        margin-bottom: 50px;
     }
 
     .courses__title,
