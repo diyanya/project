@@ -834,3 +834,32 @@ body {
         margin-left: 30px;
     }
 }
+
+.menu__link:hover {
+    color: #a3a3a3;
+    text-decoration: underline;
+}
+
+.buttons-book:hover {
+    background-color: #333;
+}
+
+.header__buttons-activities:hover {
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.social-link img {
+    transition: transform 0.3s;
+}
+
+.social-link:hover img {
+    transform: scale(1.1);
+}
+
+.reviews__img {
+    transition: transform 0.3s;
+}
+
+.reviews__item:hover .reviews__img {
+    transform: scale(1.05);
+}
